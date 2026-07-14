@@ -21,8 +21,8 @@ $peserta = [
     ['nama' => 'Reza Ibrahim', 'umur' => 23, 'tinggi' => 173, 'kelas' => 'A'],
     ['nama' => 'Rudi',         'umur' => 28, 'tinggi' => 165, 'kelas' => 'B'],
     ['nama' => 'Iqbal',        'umur' => 31, 'tinggi' => 178, 'kelas' => 'C'],
-    ['nama' => 'Bambang',     'umur' => 40, 'tinggi' => 168, 'kelas' => 'D'],
-    ['nama' => 'Rusdi',       'umur' => 15, 'tinggi' => 170, 'kelas' => 'E'],
+    ['nama' => 'Bambang',      'umur' => 40, 'tinggi' => 168, 'kelas' => 'D'],
+    ['nama' => 'Rusdi',        'umur' => 15, 'tinggi' => 170, 'kelas' => 'E'],
     ['nama' => 'Fahmi Anwar',  'umur' => 22, 'tinggi' => 175, 'kelas' => 'A'],
     ['nama' => 'Siti Aminah',  'umur' => 26, 'tinggi' => 160, 'kelas' => 'B'],
     ['nama' => 'Dewi Lestari', 'umur' => 19, 'tinggi' => 163, 'kelas' => 'C'],
@@ -43,13 +43,15 @@ switch ($hari) {
     default:
         echo "hari ini bukan hari senin ataupun selasa.";
 }
+
 function cekumur($umur) {
-    if ($umur >= 30) {
+    if ($umur >= 17) { 
         return "Sudah memiliki KTP";
     } else {
         return "Belum memiliki KTP";
     }
 }
+
 function namakelas($kelas) {
     switch ($kelas) {
         case 'A':
@@ -77,6 +79,7 @@ function namakelas($kelas) {
         table {
             border-collapse: collapse;
             width: 50%;
+            margin-top: 20px;
         }
         th, td {
             border: 1px solid black;
