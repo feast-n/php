@@ -1,21 +1,23 @@
 <?php
-
+include 'koneksi.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $nama = $_POST['nama'];
     $umur = $_POST['umur'];
     $tinggi = $_POST['tinggi'];
 
-    $peserta[] = [
-        'nama' => $nama,
-        'umur' => $umur,
-        'tinggi' => $tinggi,
-    ];
+    // $peserta[] = [
+    //     'nama' => $nama,
+    //     'umur' => $umur,
+    //     'tinggi' => $tinggi
+    // ];
+    $insert = mysqli_query($koneksi, "INSERT INTO peserta (nama, umur, tinggi) VALUES ('$nama', '$umur', '$tinggi')");
+    header("Location: 9.php");
 
-    echo "<strong>Data Berhasil Disimpan:</strong><br>";
-    echo "Nama: " . $peserta[0]['nama'] . "<br>";
-    echo "Umur: " . $peserta[0]['umur'] . " tahun<br>";
-    echo "Tinggi: " . $peserta[0]['tinggi'] . " cm<br><br>";
+    // echo "<strong>Data Berhasil Disimpan:</strong><br>";
+    // echo "Nama: " . $peserta[0]['nama'] . "<br>";
+    // echo "Umur: " . $peserta[0]['umur'] . " tahun<br>";
+    // echo "Tinggi: " . $peserta[0]['tinggi'] . " cm<br><br>";
 }
 ?>
 

@@ -1,4 +1,11 @@
- <div style="margin-bottom: 10px;">
+<?php
+include 'koneksi.php';
+
+
+$query = "SELECT * FROM peserta";
+$result = mysqli_query($koneksi, $query);
+?>
+<div style="margin-bottom: 10px;">
     <a class="btn" href="9.php?tambah">Tambah Data</a>
 </div>
 <table>
